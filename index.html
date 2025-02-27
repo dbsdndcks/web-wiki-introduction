@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
@@ -6,6 +7,29 @@
     <title>자기소개 위키 페이지</title>
     <link rel="stylesheet" href="./css/main.css" />
     <script src="./js/index.js"></script>
+    <script>
+      function addComment() {
+        var commentInput = document.getElementById("commentInput");
+        var commentText = commentInput.value.trim();
+        var commentDiv = document.createElement("li");
+        commentDiv.innerHTML = `
+          <div class="comment-item">
+            <div class="comment-author">
+              <img src="./images/comment-author-icon.png" alt="사용자 프로필 이미지" />
+              <span>방문자</span>
+            </div>
+            <div class="comment-content">
+              <p>${commentText}</p>
+            </div>
+          </div>
+        `;
+          
+        var commentsList = document.querySelector(".comment-list");
+        commentsList.insertBefore(commentDiv, commentsList.firstChild);
+        commentInput.value = "";
+        alert("댓글이 등록되었습니다");
+      }
+    </script>
   </head>
   <body>
     <div id="app">
@@ -21,41 +45,82 @@
         <section>
           <h3 class="subtitle">자기소개</h3>
           <p>
-            안녕하세요, 저는 끊임없이 새로운 도전을 통해 성장하는 것을 즐기는 크론이에요. 안정적인 삶에서 벗어나 세 번의
-            큰 전환점을 겪으며 지금의 제가 되었어요. 어제보다 더 나은 오늘의 나를 만들기 위해 노력하고 있죠. 매일의 작은
-            성취들이 모여 제가 한 걸음 더 성장했다는 것을 느낄 때면 가슴이 벅차오르거든요. 그러다 문득, 저처럼 변화를
-            갈망하며 도전을 꿈꾸는 분들이 많다는 것을 알게 되었어요. 나의 성장도 의미 있지만, 누군가의 성장을 함께할 수
-            있다는 건 매일 새로운 설렘을 주는 일이에요.
+            안녕하세요, 항상 열정을 중요시 하는 레몬입니다. 저는 새로운걸 도전하는 것을 좋아합니다. 그래서 나중에 
+            산티아고 순례길 완주가 버킷 리스트입니다.😀 새로운 취미도 찾고 싶어요.<br>
+
+            저의 성격은 순둥순둥 데굴데굴 어디든 잘 맞아요!! 약간은 내향적인 편이지만 친해지면 누구보다 
+            잘해줍니다!! 다들 친구해요~😋<br>
+
+            저는 먹는 것을 좋아하고, 만드는 것 또한 좋아해요!  아마도? 못만드는건 없을거 같아요👍<br>
+            저는 도시보다는 자연을, 산보다는 바다를 좋아해요 <br>
+            저는 농구를 하는것도, 보는것도 좋아해요 🏀⛹️ 그리고 게임도 좋아해요 특히 웅장하고 모험하는 듯한 
+            스팀 게임과, 배틀그라운드 같은 FPS를 즐겨해요 🕹️<br>
+            저는 요즘 J-POP을 즐겨 듣고있어요 ㅎㅎ 바운디, 유우리를 무한 재생중입니다!
+            
           </p>
         </section>
 
         <section>
-          <h3 class="subtitle">나를 울린 인생 작품</h3>
+          <h3 class="subtitle">재밌었었던 순간들</h3>
+          <div class="container">
+            <div class="item"><img src="./images/beer.jpg" class="images"></div>
+            <div class="item"><img src="./images/beer2.jpg" class="images"></div>
+            <div class="item"><img src="./images/fire.jpg" class="images"></div>
+            <div class="item"><img src="./images/junju.jpg" class="images"></div>
+            <div class="item"><img src="./images/water.jpg" class="images"></div>
+            <div class="item"><img src="./images/dog.jpg" class="images"></div>
+            <div class="item"><img src="./images/capi.jpg" class="images"></div>
+            <div class="item"><img src="./images/shusi.jpg" class="images"></div>
+            <div class="item"><img src="./images/wine.jpg" class="images">s</div>
+          </div>
+        </section>
+
+        <section>
+          <h3 class="subtitle">나를 울린 인생 노래</h3>
           <article>
-            <h4>인생 영화</h4>
+            <h4>바운디 - 괴수의 꽃노래</h4>
             <div class="thumbnail">
               <img
-                src="https://image.tmdb.org/t/p/w1280/u8ffl7CRAS12KA8eQEtkLuHg8Fm.jpg"
+                src="https://i.namu.wiki/i/dBlAuE1tw5erfOg5Cd1cseZwuXXk2FgkPonviTaZPdioB3gwset9SEhaP99DgVgEqQQpT93HPv9OUArrdBOSKY-ldCAKLfdsjgxorNBp-Sqg6H1LjvTY_s7tJpTB_yJ6fnWcbkwXThXkCRuRewIUWA.webp"
                 width="200"
-                alt="그래비티 영화 포스터"
+                alt="바운디 - 괴수의 꽃노래"
               />
             </div>
             <p>
-              알폰소 쿠아론 감독이 연출하고 샌드라 불럭이 주연으로 출연하는 영화 「그래비티」는 우주 정거장에서 임무
-              수행 중 고립된 한 우주인의 생존과 귀환을 그린 작품이다. 대학생 시절 처음 본 이 영화는 당시엔 그저 지루한
-              우주 영화였다. 그런데 이 영화를 다시 보니, 마치 내 미래를 미리 보여준 복선과도 같다는 점을 깨달았다.
+              다양한 음악적 스펙트럼을 지닌 가수 바운디의 `괴수의 꽃노래`는 대한민국 뿐만 아니라 일본 현지에서도 
+              받고 있다. 시작-하이라이트-마무리 까지 노래의 구성이 알차고 재미있다. 시간이 나면 바운디의 라이브 모음을 
+              들어보는 것 또한 추천한다. 라이브를 잘하는 가수의 노래를 듣는 것이 얼마나 재미있는지 느낄 수 있을 것이다. 
+            </p>
+          </article>
+        </section>
+        <section>
+          <article>
+            <h4>유우리 - 빌리밀리언</h4>
+            <div class="thumbnail">
+              <img
+                src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxESERUREhIQFhAVExUVFhcSFRgYFRYVFRgYFxgVFhMbHSggGBslGxYWIzEhJSkrLi4uGB8zODMuNygtLi4BCgoKDg0OFQ0QDy8ZFyUtNzc3Ny0vNzArKzcvKzc4NzIrNyw4NzM3LTcuNzg3NzgrNzE3LTQ3LDg3MDg4MDc4LP/AABEIAOEA4QMBIgACEQEDEQH/xAAcAAEAAgIDAQAAAAAAAAAAAAAABwgFBgEDBAL/xAA9EAABAwIEBAQDBgUCBwEAAAABAAIDBBEFEiExBgcTQSJRYXEUMoEII0JSkaFicoKSsRUzJJOjwcLD4VP/xAAXAQEBAQEAAAAAAAAAAAAAAAAAAQUE/8QAGREBAAMBAQAAAAAAAAAAAAAAAAECEWED/9oADAMBAAIRAxEAPwCDUREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQF3U1JJISI2PeQLkMaXEAbkgdl0qffs5ZG0tS6zA41DWlw+YjIC1rvJoJdb1LvJBCcOA1j25m0tS5vm2F5H6gLwyxOaS1wLXDcOFiPcFXDxTjDD6ab4eeqhimyh2WQluh2OYiw/Vd9dhlDXxgyRU1RE4eFxDXix7tkG3uCgpkinfjDkUw3kw6TKd+hMSW+zJdx7OvvuFC+M4NUUkphqYXxSD8LxuPNp2cPUXCDwIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgLM8McT1WHy9Wmkyk2DmkXjkA2D2d++u4ubELDIgn74yg4npTGQ2DFIm3bfUj1a7eSEncbtve2xMZcKYvV4NiTY5XSRBk7GVMZJymO4DiW7O8JzNd7ELVqGskhkbLE9zJWEOa5ps5pHcFSz8TS8R07Y5SyHG4m5WPtZk4HYgbt3JA1YSSLi4QWBB/RY/G8CpayPp1MEcrNwHi5afNrt2n1C8nBXxAoKdlUxzalkYjkDiCS6Ilma40OYNDr+qziCp/M3gWTCqgNuX00tzDJax0Osb/AOJoI12IIPmBpimL7RPEZkqI8PaB04Q2V5/EZXggC/kGEH+r0UPxxlxDWglxNgALknyA7oPlF76rBaqNnUkp52R/mfG5rfLUkaLwICIiAiIgIiICIiAiIgIiICIiAiIgIiIC3Xl7y4qcVzva9sVOzwmR7S4OfvkY0EXIGp10uPNaWFbHlDRiLBqRo/FG6Q+pke5/+HAfRBCnHnKiTDKY1LquKRmdrA3I5jnF3lqRoATv2KjhTn9pV81qMa/D3lJtt1fDa/rlvb3KgxAX3DK5jg9rnNe0hzXNJDgRqCCNiD3XwiC2vKvGpqzC4KidwdM7qNc4C2bpvcwEjzIaLrPY9i8VJTy1MxtFEwuPmTsGj+JxsAPMhaZyNN8GgHlJOP8AquP/AHWqfaRxhwbTUbSQ12ad/rl8DB6jV5/RBDnEeMSVlVNVS/PK8uIGzRs1o9A0AfRWA5X8FU2HUIrqoMFQ+Pqvkk2hjIzBgvtpv3J07BVvjYSQBqSbD3KthzL4bnrsLfTQPyygMfktpL0xcRXuMt3AWO1wPcBq9Dzlw+epFKaaT4eRwiEjgyxznKC+M7MN/O9uy1LnZy7how2upG5IHvySxj5Y3OuWvZ5NNiCNgbW3sOeCuTFcZ456sxwxxvZJkzB8jy1wdlIb4Wg21N/opd5oUbZcIrWuAsKd8gv5xfeD63agqIiIgIiICIiAiIgIiICIiAiIgIiICIiD6Y0kgDcmw9yrrYRQMp4IoIxaOKNkbR6MaAPfZUpjeQQQbEG4PkRsVcrhTHoq6kiqoiLPYMwvqx4+dh9Qbj9+6DniXhylr4ehVR548weLEtLXAEBzXA3BsT+qqtzB4Y/02ukpQ5zoxZ8TnWzOjeLi9u4N2k6XLSbC6t+o85rcuBijWzROyVkTC1ub5JG3Lgx53BBJsf4jcdwFX0XfW0kkMjopWOZIxxa5rhYtcNCCF0ILKcgJ82FBt9WVMrf1DHf+S077ReGTmqiqQxxp207Yy4ahjy+Q2dbVt76E6Gxtss59nOo/4OoZ+Wqa7++MD/wXk57YpNSV1LPEW5X0745GPGaKZjX3dFLGdHtIftuL3FjqggxpsfVWr5a8fU+IU0bXyMbWsaGyxuIDnOAsZGA/M076bXsVAGMYBDPTuxDDw7ost8TTE5pKVx/EDu+A62fuO+xWp3QXhcQNTt6qLOa/Megjpp6GN3XqJoXxnpEGOLMMt3yX3G+UXOmtrqvUmIzObkdLKWflL3Efpey8qAiIgIiICIiAiIgIiICIiAiIgIiICznD/Db61rhBJEakHSB7xG+RpHzROcQ15BvdtwdiL9sGuQUG30/LHGHuyihmB83ljW/3F1lIfAOENwN5mr8VgiDgc1JE8SZzawc8WJuL/hHl4raGGH4tUFuQzzln5TI7L/bey2PlZw0zEMRjglBMAa+SUNJBLGiwFxqLuLR9UFisD5iYVVvEcNXGZCbBsgdG5x8mh4Gb6LalDOC8iIGzOfVTl8Ie4xxRXF2XOUSSnXa1w0D3W5cQcdYfhkbYi8HIwNYxpLnZQLNA3LtPxHT+JBieYHKaLEqkVTZ/h3lobLaLP1C3RrvnbZ1tO+gHksOOS2EQW+JrJ83k6SKIH+ktJ/daRxPzhrqglsLjFFqBl8LvQ+E3HqC5wWhTYtUPvmml13GYgH3A0QWX4QwXDqQyMw94dmymT74yfJmAPkPnP6he3mDwbRYkyE1c0kXTLgxzHsZcyAXac7SD8m2mxUEcmcSMWLwgnwztkgcT3ztJYP8AmNYpf54U5fgz3gkdGaF+nq7p/wDsVGO4d5VmiqmVdDXZmDwvjmjDmyxOtnjdIx1iCP4dwD2Wv8yeUNnPqcNbdpJc+mG48zB5jvk3Ha+gEYYRxVXUrs8FVOw97PJabbXY67T9QpD4d54VLSGV8LJ2afeRARzDzOX5HewDVBF9dh0sQaXtIa++V3Ylujm37OadC06juF41aGkdheKwyPjZFPHLbrCxZI17RZr5GCxbIBcCQakaXIstQ495Y0EWHTVFJFJHPAGvN5XPD2AgPuDf8JJ0tsrgg1ERQEREBERAREQEREBERAREQEREBEXuwbCZqqZkFPG58rzYNH7knsB3J2QcYRhc1TMyCBhfK82a0fuSewA1J7AKznLngqLCad1yH1LwDNIAe20cY3yi/uTr5AOXPAUOFwn5X1T2jqzW0A36cd9mC31IuewEbc2eaJmLqKgfanF2yzNOsp1DmRntH2Lh82tvD8wdXNfmZPLLJR07gynaQHGN9zIbXIe4aaHQsBLdDcu7RRPO97i97nOe43c5xJcT5lx1JXwuEBERB68KrnQTxTt+aKVkg943Bw/wrZcZUYqsLq42DN1KZ72epDepH+4aqhK13KjE/icJpXnUtjMDu+sJLBf3aGn6oKoosnxLhbqWrnpnAgxSuaL/AJQfCfq2x+qxiDI4BjdRRTtqKeRzJW+Wzh3Y9v4mm2oKtdwviceIUUdQWtyVEX3jN2gm7JWeoDg4KoCmPkLxk2N5wyYm0ry+B24DyPHGfIHKCPW/mgi/ibCXUlXNTPaWuilc2x18N7sN+4LS0/VYxSHzvxmkqsQa+lcH5YWsleAQ0vDnEAXGpAIBP07KPEBERAREQEREBERAREQEREBFv/K7l8zFBPJJM+OOHI20bQ5znPudzoAA39+1tZEl5J4cZGuElcIxuy7CXa30fbQdtkwQhw7w/U10wgpoy553OzGN7vkds1o/+C50Vm+X3A8GHQ5WDNM4DqzEWc8/laPwsB2H1OqzXD/D1PSRCGCFkUQsbNGrjtme46vdpuVh+NOIMs9PhcEvTq6wkF7RmdBCGuLpA38zspa07DU9lRHfOvmNcvwyjfZou2pkadzsYGnyGzj9PO8M0lJJK4MiY97zs2Npc4+zRqVYYcisNJaTNXGx8V3x+PW+v3en0W98NcKUWHsLaWBkd9HO3kf38Uhu4j0vYKCt9dymxiNnU+Gzs6YkPTezM0ZcxaY3EOzDYgA6jS60dT3zo5lmK+H0UhE17Tyxu1j3HRY4bP8AMj5bW3vaBEBdkEJe4NG5/wAbk/QXK61uWDYK6DDZ8RlDmiVrqanJt4i/wyFt9bludv8AKJe+VBpxU5/Zzxj7qppT+B7Jmj0eMj7exaz+5QWt45NYp0MVhBIDJw6ndfuZBdg+sjY0GR5+0BjxZ0ltJoYpAbd2jpn3PgH6qNlPX2iMML6SlqwNY5HROt+WQZgT6Ax2/qUCoCyHD1eaeqgnGnSmjk+jXAn9gseuQEGzczMO+HxWrjAs0zGRvllmAkFvSz/2WsKTuftHkrqd53fRRZv5mOe03+gaoxQEREBERAREQEREBERARFk+GcFkraqKljsHyutc7NaAXOeR3AaHH6IJ4+znARh0zyLB9W62m4bHGL+ouT+hUrFw8wtW4dw+Kkpo6WnDhHELfxPJN3Pdb8TiSfILxccccUmHMBmfnqct2wRkdQ32L/yN9TvrYFXEZjjTiqHDqV9RKQSNI2XsZJDswf5J7C6rhwzx1VR4r8dI7O6oeGTjYGN5Ayt/LlAbl/lHqsVxjxZU4lOZ53CwuI423yRt/K0efmdz+i8HD/S+Lp+sQIOvF1CdhHnbmJ9LXUVc+EWHso65z8eOw+BsFOR8XO02d3ijGhkt+YnRvsT2W4YvxHS0lOameWNsWW7SHAmQ2uGxC/jJ7AKp/GHEUuIVctVJ+M2Y2+jI26MYPYb+ZJPdBhib6ndcItz5f8u6rE3hzQY6QGz5nDTTdsY/G720Hc7XD55acDS4pUhpzNpIyDNJ6f8A5sP53fsLn0OT5xcUR1FQyipcooaMdNgZ8rpB4XOHm0ABoPoT3UhczsdgwbDmYZQ2jmlYR4T42RG4fK5w/G4ggH3I2VeUBd9FVOikZKw2fG9r2nycwhwP6hdCBBajjqNuIYNUCPXPTtqY8upOXLOAPUgW+qqurM8pq/q4ZSF1iA18JvqPA9zQD/Rl/VV/4vwY0ddUUvaKVwb/ACHxMP1YWqyMMt+5P8Gvr61sjmn4Snc2SVx2c4asiHmSRr6A+YWC4J4RqMTqBBCLMFjLK4eCJh7nzJ1s3ufQEiybqvDsComRFwYxrHFjNDNO5ou5wb+JxNrnQC42FlBFf2kpWGrpWi3UEDi7+Vzzl/cPUPrNcY8QPr6yWrfpnd4W3vkjboxn0A18zc91hUBERAREQEREBERB30dJJK9scTHPkcbNawEuJ9AF1xROc4Na0ue4hrWtFy4nQAAakk9lLH2dKGJ9ZPM9zc8UAaxptc9Q+N4HoG2/rW3uhpWV7paGhZHFHGaj4iOJr2VThtHBKfuoWDxEnOwucGjYkkK+VNHLGbSRyMN7We0tNx21CzXAfEn+nV0VWWZ2NzNe0GxLHtLTlPmL3Htbut/5mYfiWIUMWKdVz6EN6ghdGIXwhxy9Tpte8PaRYh2YuAdta6h9BMHGHOQPi6WGsmic/wCeaYMEjR+WNrS4A/xHXytuoilkLiXOJLiSSSbkk6kkncr4RARFmOE+H5q+qjpoW3c43cT8rGD5nuPkB+ugGpQYi67KeB8jgxjXPe42a1gLnOPkGjUlWXqeTWDPYWtimjd+dkzy4ewcS39lsPCfAmH4d4qaEdUixlkOeQjuMx+UHyaAEEYcv+ShOWoxPQbimadT5dV4On8rfS53ClLiriClwmi6pa1rGARwxRgNDnW8MbANGjTU9gCtglkDWlziA0Akk6AAakk+SqbzL4wfidY6QE/DxlzIG7AR3+cjs51gT9B2QYLiDGZqyokqZ3ZpZHXNtABsGtHZoAAA9FjkRARFyEFnuWOExR4XSthdI9sjeu5z9uo6we0AbAFpH0v3XRzC5cUdXUnEKmofDDHAOsGNHiEdzn6hvbw6WDSTYWXR9nvGRNhzqYkZ6aVwtfXpy3e1x/q6g/pUnTwte1zHta5jgWua4Xa5pFiCDuCFRXbEeazaVgpcGpo4aZl7SStzSPI3flvYE23dmPtsuqi4Zq5oanGsY6hZHDJkZOXMkllLckQyWGSPO8WtbUCwIU24HwHhtJMZ4KWNspuMxJdlB3DA4kM8tFq32hKzJhTWA/7tTGwjza0Pk/yxqgrUiIgIiICIiAiIgL2UVBn8TnsjiBsZH3yg+Qa0Fzj6AH1sNV41lMKaxo603ijjN2RE/wC6/fKR2j2Lj3Gg1NwEmcN8G9OhkdBO2Q1To4JpIw5s0UMxjEcQjIu3qOlY91yAWMaNMxI2Xl5gQoWS0D5GzuqWOdo3q0gIblc/LoBGLtDnPLS82DR4bmMMA4yqYqSta2oyTzTRSNJsCS4SRylunh0cw6fLlFrWWdp+M6SipzSU7+tFC0t6T4G9GtmeRnnllJc7ptIuxgDTZrfEg2fm5jdKac4fUT4gyoY0yRyNiyU8xOoic0ZQ9g8Ivl0Ivcm4MDFSvx/BOyMV73S1eFV7WyBsz/vaWZzczA12ojI1AIFiAWuGjSooKDhERAU2fZ/p42w1M41nMjYj5tjDQ9vsHOLv+WFCayOC43U0j+pTSvjeRY5bWI8nNNw4e4VgXIheMo11/wC67ojooI4I5pOqHNp60xtlc4COQDLG4nS0gvZjr7OGmva1zOlPo0X3tr7pIjTn3xUaajFHGfvaq4dbdsDbZ/7iQ32zKtykTnvWiXFSL6xwRMPoTmkt+kgUdqAiIgIiIN35Q8UjD8QY55tTzDoy32aHEZZD/K61z5FytWCqPBWP5I8c/FwfBTu/4qBoylx1lhGgPq5ugPoWnzQSmoG+0tIerRNubZJjbtcuYL++n7Kd86r/APaSa74qld+EwPA8rh5zfsWoIeREQEXK4QEREBERAREQdtLDne1l2tzOa27jZozG13HsFsOHcCV89ZLRRxgzQOIlcXARsANsxeextp3Pks1yXo6Y1xqauWnZBTsJtO9gD5JQWNblf81gXHTYhvmpCrcMiraStfDK6oMtVaQ4ewMMpf8A7LZpnk3hj6kZdbbK4m+6CJcbw3FMMZJSVDZY4JrBzTZ0EmU5g5rtW5gQDcWcFrBU+8fcx6OCkOG9JlXOIxE/NYwsc0Zcz3G95ARew2PcEKAig4REQEREBSZTc6sQjoxStZD1WxiNs5zF4aBlDi0mxfbudL9lGaIOyeZz3F73Oc9xLnOcSXOJ1JLjqSfNdaIgIiICIiAvfgWKy0lRFUwm0sTw5vkbbtPoRcH0JXgRBdLCa6Oqp46iM+CaNr2+mYXsfUbH2Ub/AGgsK6uHRVAAzU84zHuGSjI639YiXk+zvxMHwSYc93jiJliv3jefG0fyvN/6/RSDzBwp1ThlXBG3NI+Fxa3zc2zwB6kt09UFP1yuEQbLHhTGuYHQuPyOcLm7mufINA1x0ymM3H5fcrz4phrGQNe1pzX1IZJY3uP9wksOvcb+iy1fWtdZ7fvI2xxNJjk6eU2+V5DSX6m+9he1r79eLz5aN8Ly5r87XRscNmX2a78QBB8jquOL32s9aNvPzy0cagiIuxnCIiAiIg5U8cDcNRxYS9z466ogneHVED43xOIY02+HjY4Oc4yGNucuylrXE2sop4G4o/02d9S2JkkvQcyISfI17nM8bgNSMoeLAjfdfGO8Z19W4ulqJA2+kcbiyJut7Njabd9zcnuSg9XE/CNVCySqNHUwU/WLQ2YEljJCTHd9vFsWk9jlv8wvqq2fBuPK+nY6Ey9ame1zXwVV5InBwtbUhzfPwkahayUHCIiAiIgIiICIiAiIgIiICIiDKcNY3LRVUVVCfHE69js5p0cw+haSPqre8PY1DW08dTA68cjQR5tPdjvJwOhVLl6qXEp4mlsU0zGu+YRvc0O9wDqg2DmhBTR4pUtpTeLqEnbKJDrI1hB+UOJHpqOy1VckrhBzdLrhEBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQf//Z"
+                width="200"
+                alt="유우리 - 빌리밀리언"
+              />
+            </div>
+            <p>
+               시원하고 안정적인 긁는 고음을 자유자재로 내는 유우리가 부른 `빌리밀리언`은 노래만 좋을 뿐만 아니라, 스토리 있는
+               가사가 특징이다. 한 노인이 청년의 수명을 대가로 돈, 집, 가족을 거래하는 내용을 담은 가사는 결국 청년은 돈과 집보다 
+               많은 것을 누릴 수 있는 수명보다 중요한게 없다라는 의미를 우리에게 전달하고있다. 뮤직비디오와 함께 노래를 들으면 더욱 
+               많은 것을 느낄 수 있을것이다. 
             </p>
           </article>
         </section>
 
         <section>
-          <div class="comment-writing-container">
+          <div id="comment-list" class="comment-writing-container">
             <form>
               <fieldset>
                 <legend>댓글 쓰기</legend>
-                <textarea
-                  placeholder="정말 멋진 글이네요. 크루가 감동할 수 있도록 훈훈해지는 댓글 부탁 드립니다."
-                ></textarea>
+                <input type="text" id="commentInput" style="width: 400px; height: 30px;" placeholder="댓글을 입력해 주세요" />
+                <button type="button" class="btn-16" onclick="addComment()" style="height: 35px; margin-right: 5px;">등록</button>
+                <button type="reset" style="height: 35px;">취소</button>
+                </form>
               </fieldset>
             </form>
           </div>
@@ -71,32 +136,6 @@
                   다가오더라구요! 회색 신사들이 들려주는 '시간 절약'이란 말이 마치 요즘 유튜브에서 흔히 보이는 '갓생
                   살기' 영상들 같아서 씁쓸하게 웃었습니다 ㅎㅎ 광안리 해변 이야기는 정말 이 글의 하이라이트인 것 같아요.
                   저도 이제는 가끔은 멍때리는 시간을 가져야겠어요 :&#41;
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="comment-item">
-                <div class="comment-author">
-                  <img src="./images/comment-author-icon.png" alt="사용자 프로필 이미지" />
-                  <span>방문자</span>
-                </div>
-                <div class="comment-content">
-                  와... 크론이라는 닉네임의 의미를 읽고 푸지 이발사가 딱 떠올랐어요. 저도 회사에서 30분 단위로 시간
-                  쪼개서 일정 관리하다가 얼마 전에 번아웃 왔거든요 😅 시간을 아낀다고 오히려 삶을 놓치고 있었던 것
-                  같아서 마음이 찡했습니다. 글쓴이님 글 덕분에 오늘은 퇴근하고 동네 한 바퀴 돌아야겠어요~
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="comment-item">
-                <div class="comment-author">
-                  <img src="./images/comment-author-icon.png" alt="사용자 프로필 이미지" />
-                  <span>방문자</span>
-                </div>
-                <div class="comment-content">
-                  이 글 읽으면서 계속 고개를 끄덕였네요 👍 특히 자기계발서 이야기... 저도 요즘 '갓생살기' 영상 보면서
-                  조급해졌었는데, 모모 다시 읽어봐야겠어요! 시간은 아끼는 게 아니라 느끼는 거라는 말에 완전 공감입니다.
-                  저도 이제는 하루에 한 번은 커피 마시면서 창밖 구경하기로 했어요 ☕️
                 </div>
               </div>
             </li>
@@ -123,7 +162,7 @@
               <a href="#">나를 울린 인생 작품</a>
             </li>
             <li>
-              <a href="#">감상평</a>
+              <a href="#comment-list">감상평</a>
             </li>
           </ol>
         </nav>
